@@ -6,6 +6,6 @@
 
 <strong>SI AU LANCEMENT DE LA MAP AUCUN TITRE NE S'AFFICHE, IL FAUT FAIRE LA COMMANDE "/tp @a 0 225 0" PUIS "/setworldspawn 0 225 0"</strong>
 
-![Alt text](world/UHC-Pluginless.png?raw=true "Title")
+![Alt text](world/UHC-Pluginless.png?raw=true "UHC")
 
 <I>MAP BY Y0uls</I>
