@@ -1,0 +1,62 @@
+# This is the commands configuration file for Bukkit.
+# For documentation on how to make use of this file, check out the Bukkit Wiki at
+# http://wiki.bukkit.org/Commands.yml
+# 
+# If you need help on this file, feel free to join us on irc or leave a message
+# on the forums asking for advice.
+# 
+# IRC: #spigot @ irc.spi.gt
+#    (If this means nothing to you, just go to http://www.spigotmc.org/pages/irc/ )
+# Forums: http://www.spigotmc.org/
+# Bug tracker: http://www.spigotmc.org/go/bugs
+
+command-block-overrides: []
+unrestricted-advancements: false
+aliases:
+  icanhasbukkit:
+  - version $1-
+  uhcstart:
+  - clear @a
+  - playsound minecraft:entity.endereye.death master @p
+  - replaceitem entity @p slot.hotbar.4 minecraft:slime_ball 1 0 {display:{Name:"DROP
+    ME"}}
+  - tellraw @a [{"text":"La partie est sur le point de démarrer...","color":"green","bold":"true"},{"text":"\nVérifier
+    votre mode de jeu (easy ou hard).","color":"gold","bold":"true"}]
+  uhcoptions:
+  - tp @p 0 200 0
+  - gamemode 1
+  uhcpause:
+  - effect @a minecraft:slowness 1000000 255 true
+  - effect @a minecraft:jump_boost 1000000 249 true
+  - setblock -8 200 4 minecraft:air
+  - tellraw @a {"text":"UHC en pause.","color":"red","bold":"true"}
+  uhcmode-easy:
+  - effect @a 21 10000 4 true
+  - setblock -2 205 3 minecraft:air
+  - setblock -1 205 3 minecraft:diamond_block
+  uhcmode-hard:
+  - effect @a 21 0
+  - setblock -1 205 3 minecraft:air
+  - setblock -2 205 3 minecraft:diamond_block
+  uhcblurname:
+  - scoreboard teams add Pseudo
+  - scoreboard teams option Pseudo nametagVisibility never
+  - scoreboard teams join Pseudo @a
+  - tellraw @a {"text":"Tous les pseudos sont masqués !","color":"gold","bold":"true"}
+  uhcdisplayname:
+  - scoreboard teams remove Pseudo
+  - tellraw @a {"text":"Tous les pseudos sont visibles !","color":"gold","bold":"true"}
+  uhcresume:
+  - effect @a minecraft:slowness 0
+  - effect @a minecraft:jump_boost 0
+  - setblock -8 200 4 minecraft:redstone_wire
+  - tellraw @a {"text":"UHC redémarré !","color":"green","bold":"true"}
+  uhcstop:
+  - setblock 5 200 -6 minecraft:redstone_torch
+  - setblock -1 200 7 minecraft:redstone_block
+  - tellraw @a {"text":"La partie a été arrêtée manuellement.","color":"red","bold":"true"}
+  uhchelp:
+  - setblock 7 206 3 minecraft:redstone_block
+  - setblock 7 206 3 minecraft:air
+  hub:
+  - tp @p 0 225 0
