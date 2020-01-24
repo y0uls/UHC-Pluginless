@@ -1,0 +1,8 @@
+version: "2.4"
+services:
+  server:
+    image: y0uls/uhc-pluginless:latest
+    container_name: uhc
+    restart: always
+    ports:
+      - 25565:25565
